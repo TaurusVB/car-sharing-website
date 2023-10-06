@@ -1,5 +1,5 @@
 const CatalogPage = () => {
-  return <></>;
+  return <div></div>;
 };
 
 export default CatalogPage;

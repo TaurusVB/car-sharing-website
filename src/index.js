@@ -11,7 +11,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <Provider store={store}>
       <BrowserRouter basename="/car-sharing-website">
         <App />
-      </BrowserRouter>{' '}
+      </BrowserRouter>
     </Provider>
   </React.StrictMode>
 );
