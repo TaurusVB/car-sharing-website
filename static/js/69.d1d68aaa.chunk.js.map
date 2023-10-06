@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/69.d1d68aaa.chunk.js","mappings":"gJAIA,UAJoB,WAClB,OAAO,kBACR,C","sources":["pages/CatalogPage.jsx"],"sourcesContent":["const CatalogPage = () => {\n  return <div></div>;\n};\n\nexport default CatalogPage;\n"],"names":[],"sourceRoot":""}
