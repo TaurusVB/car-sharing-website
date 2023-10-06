@@ -1,8 +1,8 @@
 {
-  "name": "goit-react-hw-08-phonebook",
+  "name": "car-sharing-website",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://TaurusVB.github.io/goit-react-hw-08-phonebook/",
+  "homepage": "https://TaurusVB.github.io/car-sharing-website/",
   "dependencies": {
     "@emotion/styled": "^11.11.0",
     "@reduxjs/toolkit": "^1.9.5",

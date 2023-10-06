@@ -1,4 +1,3 @@
-import { AppBar } from 'components/AppBar/AppBar';
 import { LayoutContainer } from './Layout.styled';
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';

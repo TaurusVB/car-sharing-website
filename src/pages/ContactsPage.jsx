@@ -8,7 +8,7 @@ import {
   ContactsTitle,
   ContainerForm,
   MainTitle,
-} from 'ui/Container';
+} from 'ui/Section';
 
 const ContactsPage = () => {
   const dispatch = useDispatch();
