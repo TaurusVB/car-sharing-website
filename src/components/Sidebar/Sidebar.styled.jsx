@@ -45,16 +45,16 @@ export const Link = styled(NavLink)`
     background-color: ${colors.blue};
   }
 
-  &.active:nth-child(1) {
+  &.active:nth-of-type(1) {
     border-top-right-radius: 12px;
     border-top-left-radius: 12px;
   }
 
-  &.active:nth-child(2) {
+  &.active:nth-of-type(2) {
     border-radius: 0;
   }
 
-  &.active:nth-child(3) {
+  &.active:nth-of-type(3) {
     border-bottom-right-radius: 12px;
     border-bottom-left-radius: 12px;
   }

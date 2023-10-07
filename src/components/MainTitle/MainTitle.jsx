@@ -1,7 +1,7 @@
 import { Title } from './MainTitle.styled';
 
-const MainTitle = ({ text }) => {
-  return <Title>{text}</Title>;
+const MainTitle = ({ children }) => {
+  return <Title>{children}</Title>;
 };
 
 export default MainTitle;

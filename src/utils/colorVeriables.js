@@ -1,5 +1,6 @@
 const colors = {
   blue: '#3470FF',
+  secondBlue: '#0B44CD',
   white: '#fff',
   mainTextColor: '#121417',
   secondTextColor: '#8A8A89',
