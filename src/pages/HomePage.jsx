@@ -8,7 +8,6 @@ import WrapperContainer from 'components/WrapperContainer/WrapperContainer';
 import { Section } from 'ui/Section';
 
 const HomePage = () => {
-  console.log('object');
   return (
     <Section>
       <WrapperContainer>

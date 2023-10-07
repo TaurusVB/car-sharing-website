@@ -1,12 +1,17 @@
+import Sidebar from 'components/Sidebar/Sidebar';
 import { LayoutContainer } from './Layout.styled';
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 
 export const Layout = () => {
   return (
-    <LayoutContainer
-      style={{ maxWidth: 960, margin: '0 auto', padding: '0 16px' }}
-    >
+    <LayoutContainer>
+      <header>
+        <nav>
+          <Sidebar />
+        </nav>
+      </header>
+
       <Suspense fallback={null}>
         <Outlet />
       </Suspense>
