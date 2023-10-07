@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 
 export const Wrapper = styled.div`
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   flex-wrap: wrap;
   justify-content: space-between;
 
