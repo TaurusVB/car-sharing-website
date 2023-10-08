@@ -9,7 +9,6 @@ import colors from 'utils/colorVeriables';
 const HomePage = () => {
   return (
     <>
-      {' '}
       <MainTitle>
         Welcome to{' '}
         <span style={{ color: colors.blue }}>Car sharing company!</span> <br />{' '}

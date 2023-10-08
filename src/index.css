@@ -14,10 +14,51 @@ code {
     'Courier New', monospace;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+p {
   margin: 0;
 }
 
 svg {
   transition: all 0.3s ease-in-out;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  margin-right: 8px;
+
+  border-radius: 10px;
+  background: rgba(18, 20, 23, 0.05);
+}
+
+.modal-open {
+  overflow: hidden;
 }
