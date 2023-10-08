@@ -1,10 +1,8 @@
 import SelectForFilter from 'components/SelectForFilter/SelectForFilter';
-import { BtnSearch, FilterWrapper } from './Filter.styled';
+import { FilterWrapper } from './Filter.styled';
 import carsBrand from 'data/carsBrand';
 import valueAndLabelPriceRentForFilter from 'utils/getAvailablePriceRent';
-import { useState } from 'react';
 import valueAndLabelmileageCarsFilter from 'utils/getMileageOfCars';
-import CustomNavLink from 'components/CustomNavLink/CustomNavLink';
 import Button from 'components/Button/Button';
 
 const Filter = () => {

@@ -56,9 +56,14 @@ svg {
   margin-right: 8px;
 
   border-radius: 10px;
-  background: rgba(18, 20, 23, 0.05);
+  background: #3470ff;
 }
 
 .modal-open {
   overflow: hidden;
+  padding-right: 8px;
+}
+
+.giphy-embed {
+  margin: 100px auto 0 auto;
 }

@@ -10,6 +10,7 @@ export const Backdrop = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
   background-color: ${colors.backdrop};
 `;
 
@@ -17,9 +18,8 @@ export const ModalWrap = styled.div`
   position: absolute;
   width: 541px;
   padding: 40px;
-
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
 
   background-color: ${colors.white};
   border-radius: 24px;

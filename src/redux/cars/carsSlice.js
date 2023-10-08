@@ -1,5 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { fetchCars } from './operations';
+import isEqual from 'lodash/isEqual';
 
 const carsInitialValue = { items: [], isLoading: false, erorr: null };
 
@@ -16,16 +17,21 @@ const handleRejected = (state, action) => {
 const handleFulfilled = (state, { payload }) => {
   state.isLoading = false;
   state.error = null;
-  state.items = payload;
+  if (!isEqual(state.items, payload)) {
+    state.items.push(...payload);
+  }
+  if (payload.length === 0) {
+    state.error = 'No cars found';
+  }
 };
 
 const cars = createSlice({
   name: 'cars',
   initialState: carsInitialValue,
-  extraReducers: {
-    [fetchCars.pending]: handlePending,
-    [fetchCars.fulfilled]: handleFulfilled,
-    [fetchCars.rejected]: handleRejected,
+  extraReducers: builder => {
+    builder.addCase(fetchCars.pending, handlePending);
+    builder.addCase(fetchCars.fulfilled, handleFulfilled);
+    builder.addCase(fetchCars.rejected, handleRejected);
   },
 });
 

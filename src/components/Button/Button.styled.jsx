@@ -2,10 +2,11 @@ import styled from '@emotion/styled';
 import colors from 'utils/colorVeriables';
 
 export const Btn = styled.button`
-  width: 100%;
+  width: ${props => (props.widthForModal ? 'auto' : '100%')};
   display: inline-block;
   box-sizing: border-box;
   padding: 14px 44px;
+  margin: 0 auto;
 
   border-radius: 12px;
 

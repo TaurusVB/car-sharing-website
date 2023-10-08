@@ -2,12 +2,13 @@ import colors from 'utils/colorVeriables';
 import {
   CarDetailsText,
   CarDetailsWrapper,
-  CarImg,
+  DescriptionText,
   FavoriteBtn,
-  ImgWrapper,
   ListItem,
   MainTitleItem,
   MainTitleItemWrapper,
+  RentalCondition,
+  RentalConditionsWrapper,
 } from './CarListItem.styled';
 import Button from 'components/Button/Button';
 import createArrayFromCarDetails from 'utils/createArrayFromCarDetails';
@@ -17,9 +18,15 @@ import carNotFound from '../../assets/car_not_found.png';
 import { AiOutlineHeart, AiFillHeart } from 'react-icons/ai';
 import { useState } from 'react';
 import Modal from 'components/Modal/Modal';
+import ImgWrapper from 'components/ImgWrapper/ImgWrapper';
+import CarImage from 'components/CarImage/CarImage';
+import { useDispatch } from 'react-redux';
+import { toggleIdInArray } from 'redux/cars/favoritesSlice';
 
 const CarListItem = ({ data }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const dispatch = useDispatch();
 
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
@@ -38,6 +45,12 @@ const CarListItem = ({ data }) => {
     mileage,
     engineSize,
     img,
+    fuelConsumption,
+    id,
+    description,
+    accessories,
+    functionalities,
+    rentalConditions,
   } = data;
 
   const carsDetails = createArrayFromCarDetails(
@@ -52,8 +65,8 @@ const CarListItem = ({ data }) => {
     <>
       <ListItem>
         <ImgWrapper>
-          <CarImg src={photoLink || img || carNotFound} />
-          <FavoriteBtn>
+          <CarImage src={photoLink || img || carNotFound} />
+          <FavoriteBtn onClick={() => dispatch(toggleIdInArray(id))}>
             {false ? (
               <AiOutlineHeart size={18} color={colors.white} />
             ) : (
@@ -62,12 +75,12 @@ const CarListItem = ({ data }) => {
           </FavoriteBtn>
         </ImgWrapper>
         <MainTitleItemWrapper>
-          <MainTitleItem>
+          <MainTitleItem fontSize={16}>
             {make} <span style={{ color: colors.blue }}>{model}</span>, {year}
           </MainTitleItem>
           <MainTitleItem>{rentalPrice}</MainTitleItem>
         </MainTitleItemWrapper>
-        <CarDetailsWrapper>
+        <CarDetailsWrapper marginBottom={28}>
           {carsDetails.map(item => (
             <CarDetailsText key={nanoid()}>{item}</CarDetailsText>
           ))}
@@ -75,7 +88,47 @@ const CarListItem = ({ data }) => {
         <Button text={'Learn more'} onClick={toggleModal} />
       </ListItem>
 
-      {isModalOpen && <Modal toggleModal={toggleModal} />}
+      {isModalOpen && (
+        <Modal toggleModal={toggleModal}>
+          <ImgWrapper>
+            <CarImage src={photoLink || img || carNotFound} />
+          </ImgWrapper>
+          <MainTitleItemWrapper>
+            <MainTitleItem fontSize={18}>
+              {make} <span style={{ color: colors.blue }}>{model}</span>, {year}
+            </MainTitleItem>
+          </MainTitleItemWrapper>
+          <CarDetailsWrapper marginBottom={14}>
+            {carsDetails.map(item => (
+              <CarDetailsText key={nanoid()}>{item}</CarDetailsText>
+            ))}
+            <CarDetailsText key={nanoid()}>Id: {id}</CarDetailsText>
+            <CarDetailsText key={nanoid()}>
+              Fuel Consumption: {fuelConsumption}
+            </CarDetailsText>
+          </CarDetailsWrapper>
+          <DescriptionText>{description}</DescriptionText>
+          <MainTitleItem fontSize={14}>
+            Accessories and functionalities:
+          </MainTitleItem>
+          <CarDetailsWrapper marginBottom={24}>
+            {[...accessories, ...functionalities].map(item => (
+              <CarDetailsText key={nanoid()}>{item}</CarDetailsText>
+            ))}
+          </CarDetailsWrapper>
+          <MainTitleItem fontSize={14}>Rental Conditions: </MainTitleItem>
+          <RentalConditionsWrapper>
+            {[
+              ...rentalConditions.split('\n'),
+              `Mileage: ${mileage}`,
+              `Price: ${rentalPrice}`,
+            ].map(item => (
+              <RentalCondition key={nanoid()}>{item}</RentalCondition>
+            ))}
+          </RentalConditionsWrapper>
+          <Button text={'Rental car'} onClick={toggleModal} widthForModal />
+        </Modal>
+      )}
     </>
   );
 };
