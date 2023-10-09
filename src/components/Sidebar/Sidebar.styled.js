@@ -4,7 +4,9 @@ import colors from 'utils/colorVeriables';
 
 export const Container = styled.div`
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   position: fixed;
   height: 100%;
   width: 75px;
@@ -70,13 +72,11 @@ export const Link = styled(NavLink)`
 `;
 
 export const CompanyTextLink = styled(NavLink)`
-  position: absolute;
-  width: 388px;
-  bottom: 185px;
-  left: -160px;
+  width: 266px;
+  margin-bottom: 130px;
 
   color: ${colors.white};
-  font-size: 35px;
+  font-size: 24px;
   font-weight: 700;
   text-align: center;
   text-decoration: none;
