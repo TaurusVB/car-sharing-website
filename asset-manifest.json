@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/car-sharing-website/static/css/main.41ceb073.css",
-    "main.js": "/car-sharing-website/static/js/main.6cf47b66.js",
-    "static/js/788.a7b5a1da.chunk.js": "/car-sharing-website/static/js/788.a7b5a1da.chunk.js",
-    "static/js/116.b559e940.chunk.js": "/car-sharing-website/static/js/116.b559e940.chunk.js",
-    "static/js/512.432312b3.chunk.js": "/car-sharing-website/static/js/512.432312b3.chunk.js",
+    "main.js": "/car-sharing-website/static/js/main.2cb36876.js",
+    "static/js/942.00dd680f.chunk.js": "/car-sharing-website/static/js/942.00dd680f.chunk.js",
+    "static/js/116.b625b877.chunk.js": "/car-sharing-website/static/js/116.b625b877.chunk.js",
+    "static/js/512.2dcb3cfe.chunk.js": "/car-sharing-website/static/js/512.2dcb3cfe.chunk.js",
     "static/js/287.c10ddb17.chunk.js": "/car-sharing-website/static/js/287.c10ddb17.chunk.js",
     "static/media/car_not_found.png": "/car-sharing-website/static/media/car_not_found.3de6f3b87742587eb680.png",
     "index.html": "/car-sharing-website/index.html",
     "main.41ceb073.css.map": "/car-sharing-website/static/css/main.41ceb073.css.map",
-    "main.6cf47b66.js.map": "/car-sharing-website/static/js/main.6cf47b66.js.map",
-    "788.a7b5a1da.chunk.js.map": "/car-sharing-website/static/js/788.a7b5a1da.chunk.js.map",
-    "116.b559e940.chunk.js.map": "/car-sharing-website/static/js/116.b559e940.chunk.js.map",
-    "512.432312b3.chunk.js.map": "/car-sharing-website/static/js/512.432312b3.chunk.js.map",
+    "main.2cb36876.js.map": "/car-sharing-website/static/js/main.2cb36876.js.map",
+    "942.00dd680f.chunk.js.map": "/car-sharing-website/static/js/942.00dd680f.chunk.js.map",
+    "116.b625b877.chunk.js.map": "/car-sharing-website/static/js/116.b625b877.chunk.js.map",
+    "512.2dcb3cfe.chunk.js.map": "/car-sharing-website/static/js/512.2dcb3cfe.chunk.js.map",
     "287.c10ddb17.chunk.js.map": "/car-sharing-website/static/js/287.c10ddb17.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.41ceb073.css",
-    "static/js/main.6cf47b66.js"
+    "static/js/main.2cb36876.js"
   ]
 }
