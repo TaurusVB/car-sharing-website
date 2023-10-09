@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import colors from 'utils/colorVeriables';
 
 export const Button = styled.button`
-  margin: 100px auto 0 auto;
+  margin: 0 auto;
 
   color: ${colors.blue};
   font-size: 16px;

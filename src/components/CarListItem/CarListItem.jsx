@@ -20,13 +20,16 @@ import { useState } from 'react';
 import Modal from 'components/Modal/Modal';
 import ImgWrapper from 'components/ImgWrapper/ImgWrapper';
 import CarImage from 'components/CarImage/CarImage';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { toggleIdInArray } from 'redux/cars/favoritesSlice';
+import { getIdFavorites } from 'redux/cars/selectors';
 
 const CarListItem = ({ data }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const dispatch = useDispatch();
+
+  const favoriteIds = useSelector(getIdFavorites);
 
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
@@ -67,7 +70,7 @@ const CarListItem = ({ data }) => {
         <ImgWrapper>
           <CarImage src={photoLink || img || carNotFound} />
           <FavoriteBtn onClick={() => dispatch(toggleIdInArray(id))}>
-            {false ? (
+            {!favoriteIds.includes(id) ? (
               <AiOutlineHeart size={18} color={colors.white} />
             ) : (
               <AiFillHeart size={18} color={colors.blue} />

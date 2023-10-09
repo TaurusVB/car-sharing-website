@@ -1,6 +1,6 @@
 import { createSelector } from '@reduxjs/toolkit';
 
-export const getCars = state => state.cars.items;
+export const getCars = state => state.cars.allCars;
 
 export const getIsLoading = state => state.cars.isLoading;
 

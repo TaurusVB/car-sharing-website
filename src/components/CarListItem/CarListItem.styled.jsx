@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import colors from 'utils/colorVeriables';
 
 export const ListItem = styled.li`
-  flex-grow: 1;
+  flex-grow: 0;
   flex-basis: 273px;
   width: 274px;
 `;
