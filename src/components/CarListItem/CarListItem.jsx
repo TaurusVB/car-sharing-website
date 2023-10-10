@@ -112,7 +112,6 @@ const CarListItem = ({ data }) => {
               `Mileage: ${mileageToLocalString()}`,
               `Price: ${rentalPrice}`,
             ]}
-            toggleModal={toggleModal}
           />
         </Modal>
       )}

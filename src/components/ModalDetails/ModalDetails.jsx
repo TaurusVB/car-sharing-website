@@ -23,7 +23,6 @@ const ModalDetails = ({
   accessories,
   functionalities,
   arrRentalConditions,
-  toggleModal,
 }) => {
   return (
     <>
@@ -57,7 +56,7 @@ const ModalDetails = ({
       <MainTitleItem fontSize={14}>Rental Conditions: </MainTitleItem>
       <RentalConditionsWrapper arrRentalConditions={arrRentalConditions} />
       <CallLink href="tel:+380961111111">
-        <Button text={'Rental car'} onClick={toggleModal} widthForModal />
+        <Button text={'Rental car'} widthForModal />
       </CallLink>
     </>
   );
