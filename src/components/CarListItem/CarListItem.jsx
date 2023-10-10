@@ -1,9 +1,5 @@
 import colors from 'utils/colorVeriables';
-import {
-  ListItem,
-  RentalCondition,
-  RentalConditionsWrapper,
-} from './CarListItem.styled';
+import { ListItem } from './CarListItem.styled';
 import Button from 'components/Button/Button';
 import createArrayFromCarDetails from 'utils/createArrayFromCarDetails';
 import { nanoid } from 'nanoid';
@@ -20,7 +16,6 @@ import MainTitleItemWrapper from 'components/MainTitleItemWrapper/MainTitleItemW
 import MainTitleItem from 'components/MainTitleItem/MainTitleItem';
 import CarDetailsWrapper from 'components/CarDetailsWrapper/CarDetailsWrapper';
 import CarDetailsText from 'components/CarDetailsText/CarDetailsText';
-import DescriptionText from 'components/DescriptionText/DescriptionText';
 import ModalDetails from 'components/ModalDetails/ModalDetails';
 
 const CarListItem = ({ data }) => {
@@ -55,11 +50,13 @@ const CarListItem = ({ data }) => {
     rentalConditions,
   } = data;
 
+  const mileageToLocalString = () => mileage.toLocaleString('en-US') + ' km';
+
   const carsDetails = createArrayFromCarDetails(
     address,
     rentalCompany,
     type,
-    mileage,
+    mileageToLocalString(),
     engineSize
   );
 
@@ -112,7 +109,7 @@ const CarListItem = ({ data }) => {
             functionalities={functionalities}
             arrRentalConditions={[
               ...rentalConditions.split('\n'),
-              `Mileage: ${mileage}`,
+              `Mileage: ${mileageToLocalString()}`,
               `Price: ${rentalPrice}`,
             ]}
             toggleModal={toggleModal}

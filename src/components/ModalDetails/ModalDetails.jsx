@@ -1,4 +1,5 @@
 import Button from 'components/Button/Button';
+import CallLink from 'components/CallLink/CallLink';
 import CarDetailsText from 'components/CarDetailsText/CarDetailsText';
 import CarDetailsWrapper from 'components/CarDetailsWrapper/CarDetailsWrapper';
 import CarImage from 'components/CarImage/CarImage';
@@ -55,7 +56,9 @@ const ModalDetails = ({
       </CarDetailsWrapper>
       <MainTitleItem fontSize={14}>Rental Conditions: </MainTitleItem>
       <RentalConditionsWrapper arrRentalConditions={arrRentalConditions} />
-      <Button text={'Rental car'} onClick={toggleModal} widthForModal />
+      <CallLink href="tel:+380961111111">
+        <Button text={'Rental car'} onClick={toggleModal} widthForModal />
+      </CallLink>
     </>
   );
 };
