@@ -6,7 +6,7 @@ Welcome to the Car Sharing Website repository! This project allows you to explor
 
 ### Car Catalog
 
-In the Car Catalog section, you can browse a wide selection of available cars for car sharing. Each car listing provides detailed information about the car, including its make, model, year, and more. You can also view high-quality photos of each car by clicking on the car's image. Additionally, you can click the "Learn More" button on any car listing to view additional details about the car.
+In the Car Catalog section, you can browse a wide selection of available cars for car sharing. Each car listing provides detailed information about the car, including its make, model, year, and more. Additionally, you can click the "Learn More" button on any car listing to view additional details about the car.
 
 ![Car Catalog](link_to_catalog_image.jpg)
 
