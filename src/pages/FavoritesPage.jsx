@@ -6,7 +6,8 @@ import MainTitle from 'components/MainTitle/MainTitle';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchAllCars } from 'redux/cars/operations';
-import { getFavoritesCars, getIsLoading } from 'redux/cars/selectors';
+import { getIsLoading } from 'redux/cars/selectors';
+import { getFavoritesCars } from 'redux/favorite/sellectors';
 
 const FavoritesPage = () => {
   const [displayedItems, setDisplayedItems] = useState(8);

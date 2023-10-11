@@ -1,12 +1,12 @@
-import carsData from '../data/carsData.json';
+const valueAndLabelmileageCarsFilter = cars => {
+  const mileageCarsSorted = cars.map(car => car.mileage).sort((a, b) => a - b);
 
-const mileageCarsSorted = carsData
-  .map(car => car.mileage)
-  .sort((a, b) => a - b);
+  const uniquesCarsMileage = [...new Set(mileageCarsSorted)];
 
-const valueAndLabelmileageCarsFilter = mileageCarsSorted.map(mileage => ({
-  value: mileage,
-  label: mileage.toLocaleString('en-US'),
-}));
+  return uniquesCarsMileage.map(mileage => ({
+    value: mileage,
+    label: mileage.toLocaleString('en-US'),
+  }));
+};
 
 export default valueAndLabelmileageCarsFilter;

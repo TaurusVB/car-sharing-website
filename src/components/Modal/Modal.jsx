@@ -32,7 +32,6 @@ export const Modal = ({ children, toggleModal }) => {
         <ButtonExit type="button" onClick={() => toggleModal()}>
           <AiOutlineClose size={24} />
         </ButtonExit>
-
         {children}
       </ModalWrap>
     </Backdrop>,

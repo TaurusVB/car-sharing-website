@@ -1,7 +1,6 @@
 import { AiFillHeart, AiOutlineHeart } from 'react-icons/ai';
 import colors from 'utils/colorVeriables';
-
-const { Button } = require('./FavoriteBtn.styled');
+import { Button } from './FavoriteBtn.styled';
 
 const FavoriteBtn = ({ onClick, isFavorite }) => {
   return (

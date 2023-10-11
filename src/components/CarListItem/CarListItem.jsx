@@ -3,20 +3,19 @@ import { ListItem } from './CarListItem.styled';
 import Button from 'components/Button/Button';
 import createArrayFromCarDetails from 'utils/createArrayFromCarDetails';
 import { nanoid } from 'nanoid';
-
 import { useState } from 'react';
 import Modal from 'components/Modal/Modal';
 import ImgWrapper from 'components/ImgWrapper/ImgWrapper';
 import CarImage from 'components/CarImage/CarImage';
 import { useDispatch, useSelector } from 'react-redux';
-import { toggleIdInArray } from 'redux/cars/favoritesSlice';
-import { getIdFavorites } from 'redux/cars/selectors';
 import FavoriteBtn from 'components/FavoriteBtn/FavoriteBtn';
 import MainTitleItemWrapper from 'components/MainTitleItemWrapper/MainTitleItemWrapper';
 import MainTitleItem from 'components/MainTitleItem/MainTitleItem';
 import CarDetailsWrapper from 'components/CarDetailsWrapper/CarDetailsWrapper';
 import CarDetailsText from 'components/CarDetailsText/CarDetailsText';
 import ModalDetails from 'components/ModalDetails/ModalDetails';
+import { getIdFavorites } from 'redux/favorite/sellectors';
+import { toggleIdInArray } from 'redux/favorite/slice';
 
 const CarListItem = ({ data }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);

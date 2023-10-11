@@ -1,14 +1,14 @@
-import carsData from '../data/carsData.json';
+const valueAndLabelPriceRentForFilter = cars => {
+  const priceRent = cars.map(car => +car.rentalPrice.substring(1));
 
-const priceRent = carsData.map(car => +car.rentalPrice.substring(1));
+  const uniquePrice = new Set(priceRent);
 
-const uniquePrice = new Set(priceRent);
+  const sortedPriceRent = [...uniquePrice].sort((a, b) => a - b);
 
-const sortedPriceRent = [...uniquePrice].sort((a, b) => a - b);
-
-const valueAndLabelPriceRentForFilter = sortedPriceRent.map(price => ({
-  value: price,
-  label: price,
-}));
+  return sortedPriceRent.map(price => ({
+    value: price,
+    label: `To ${price} $`,
+  }));
+};
 
 export default valueAndLabelPriceRentForFilter;

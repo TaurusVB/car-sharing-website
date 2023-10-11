@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-export const FilterWrapper = styled.div`
+export const FilterWrapper = styled.form`
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
