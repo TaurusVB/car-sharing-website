@@ -23,11 +23,12 @@ const ModalDetails = ({
   accessories,
   functionalities,
   arrRentalConditions,
+  alt
 }) => {
   return (
     <>
       <ImgWrapper>
-        <CarImage src={srcImg} />
+        <CarImage src={srcImg} alt={alt}/>
       </ImgWrapper>
       <MainTitleItemWrapper>
         <MainTitleItem fontSize={18}>

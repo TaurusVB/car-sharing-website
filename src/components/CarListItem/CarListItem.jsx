@@ -63,7 +63,7 @@ const CarListItem = ({ data }) => {
     <>
       <ListItem>
         <ImgWrapper>
-          <CarImage src={photoLink || img} />
+          <CarImage src={photoLink || img} alt={make + ' ' + model} />
           <FavoriteBtn
             onClick={() => dispatch(toggleIdInArray(id))}
             isFavorite={!favoriteIds.includes(id)}
@@ -97,6 +97,7 @@ const CarListItem = ({ data }) => {
         <Modal toggleModal={toggleModal}>
           <ModalDetails
             srcImg={photoLink || img}
+            alt={make + ' ' + model}
             make={make}
             model={model}
             year={year}
