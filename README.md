@@ -9,7 +9,10 @@ explore and favorite cars for car sharing.
 
 In the Car Catalog section, you can browse a wide selection of available cars
 for car sharing. Each car listing provides detailed information about the car,
-including its make, model, year, and more. Additionally, you can click the
+including its make, model, year, and more. In the Car Catalog section, you can browse a wide selection of available cars
+for car sharing. Each car listing provides detailed information about the car,
+including its make, model, year, and more. You can easily filter cars by their brand, hourly rental price, and mileage to find the perfect car for your needs. 
+Additionally, you can click the
 "Learn More" button on any car listing to view additional details about the car.
 
 ![Car Catalog](src/assets/CatalogCars.png)
